@@ -41,7 +41,13 @@ li {
 /*code was taken from https://www.codingnepalweb.com/build-memory-card-game-html-javascript/
 to get the icons to align in 4x4*/
 .cards .play-card {
-    height: calc(100% / 4 - 10px);
+    cursor: pointer;
+  list-style: none;
+  user-select: none;
+  position: relative;
+  perspective: 1000px;
+  transform-style: preserve-3d;
+  height: calc(100% / 4 - 10px);
   width: calc(100% / 4 - 10px);
 }
 .play-card {
@@ -49,6 +55,18 @@ to get the icons to align in 4x4*/
     background-color: aliceblue;
     align-items: center;
     justify-content: center;
+}
+.play-card .side {
+    backface-visibility: hidden;
+}
+.play-card .back {
+    transform: rotateY(-180deg);
+}
+.play-card:hover .back {
+    transform: rotateY(0);
+}
+.play-card:hover .front {
+    transform: rotateY(-180deg);
 }
 footer {
     position: fixed;
