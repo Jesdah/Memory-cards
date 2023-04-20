@@ -42,11 +42,6 @@ li {
 to get the icons to align in 4x4*/
 .cards .play-card {
     cursor: pointer;
-  list-style: none;
-  user-select: none;
-  position: relative;
-  perspective: 1000px;
-  transform-style: preserve-3d;
   height: calc(100% / 4 - 10px);
   width: calc(100% / 4 - 10px);
 }
@@ -55,7 +50,9 @@ to get the icons to align in 4x4*/
     background-color: aliceblue;
     align-items: center;
     justify-content: center;
+    width: 30px;
 }
+/*Flip animation taken from:https://www.codingnepalweb.com/build-memory-card-game-html-javascript/*/
 .play-card .side {
     backface-visibility: hidden;
 }
@@ -67,6 +64,12 @@ to get the icons to align in 4x4*/
 }
 .play-card:hover .front {
     transform: rotateY(-180deg);
+}
+.front {
+    color: rgb(37, 23, 50);
+}
+.side {
+    font-size: 40px;
 }
 footer {
     position: fixed;
