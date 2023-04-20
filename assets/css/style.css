@@ -71,6 +71,23 @@ to get the icons to align in 4x4*/
 .side {
     font-size: 40px;
 }
+@media screen and (max-width:750px) {
+body {
+    display: block;
+}
+}
+@media screen and (max-width:600px) {
+    .play-ground {
+        width: 100%;
+        margin:0;
+        padding: 0;
+    }
+    .side {
+        font-size: 20px;
+    }
+}
+    
+
 footer {
     position: fixed;
     bottom: 0;
