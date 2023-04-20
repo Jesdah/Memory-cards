@@ -50,3 +50,14 @@ to get the icons to align in 4x4*/
     align-items: center;
     justify-content: center;
 }
+footer {
+    position: fixed;
+    bottom: 0;
+    background-color: black;
+    color: beige;
+    height: 5%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
