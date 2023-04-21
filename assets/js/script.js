@@ -14,6 +14,8 @@ let icons= ['fa-solid fa-image',
 'fa-solid fa-bicycle',
 'fa-solid fa-feather'];
 
+icons.push(...icons);
+
 // Shufle icons.
 for (let i = 0; i < 100; i++) {
     const idx1 = Math.floor(Math.random() * icons.length);
@@ -25,31 +27,9 @@ for (let i = 0; i < 100; i++) {
 }
 console.log(icons);
 for (let i = 0; i < cardslength; i++) {
-  const card = document.getElementsByClassName('side');
-   card.addEventListener('click', () => {
-    if (!card.classList.contains('flip')) {
-      card.classList.add('flip');
-
-      if (!previousShownCard) {
-        previousShownCard = card;
-      } else {
-        const iconOne = previousShownCard.querySelector('i').classList[1];
-
-        const iconTwo = card.querySelector('i').classList[1];
-
-        if (iconOne !== iconTwo) {
-          const temp = previousShownCard;
-          setTimeout(() => {
-            temp.classList.remove('flip');
-            card.classList.remove('flip');
-          }, 1000);
-        }
-        previousShownCard = undefined;
-      }
-    }
-  });
-
-  cards.push(card);
-
-  container.appendChild(card);
+console.log(cardslength);
 }
+function flipCards() {
+  document.getElementsByClassName('flip')
+}
+document.flipCards;
