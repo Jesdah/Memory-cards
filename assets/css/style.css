@@ -59,10 +59,10 @@ to get the icons to align in 4x4*/
 .play-card .back {
     transform: rotateY(-180deg);
 }
-.play-card.flip .back {
+.play-card:hover .back {
     transform: rotateY(0);
 }
-.play-card.flip .front {
+.play-card:hover .front {
     transform: rotateY(-180deg);
 }
 .front {
