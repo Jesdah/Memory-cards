@@ -1,12 +1,13 @@
-
-
-let cards = document.querySelectorAll(".play-card");
-let matched = 0;
+let cards = document.getElementsByClassName("play-card");
 let cardOne, cardTwo;
-let disableDeck = false;
+let disableDeck= false;
 
-function flipCard () {
 
+function flipCard({target: clickedCard}) {
+   if (cardOne== clickedCard && !disableDeck) {
+    clickedCard.getElementsByClassName("flip")
+   }
+    
 }
 
 function matchCard () {
