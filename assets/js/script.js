@@ -1,6 +1,6 @@
 const card= document.querySelectorAll('.play-card');
 const cardslength = 16;
-const cards = [];
+let cards = [];
 
 
 let flippedCard=false;
@@ -18,16 +18,14 @@ let icons= ['fa-solid fa-image',
 icons.push(...icons);
 
 // Shufle icons.
-for (let i = 0; i < 100; i++) {
-    const idx1 = Math.floor(Math.random() * icons.length);
-    const idx2 = Math.floor(Math.random() * icons.length);
+function shuffleCards(icons) {
+  cards=icons.length;
+  for (let i = 0; i < cards; i++) {
+    icons =Math.Floor(Math.random()*16);
     
-    const temp = icons[idx1];
-  icons[idx1] = icons[idx2];
-  icons[idx2] = temp;
-}
-
-
+  }
+  
+};
 
 
 // I made this function with help of this turorial:https://jefferson-cuartas.medium.com/how-to-create-a-flip-card-effect-using-javascript-767dd945210c
