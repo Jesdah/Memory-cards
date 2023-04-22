@@ -20,11 +20,14 @@ icons.push(...icons);
 // Shufle icons.
 function shuffleCards(icons) {
   cards=icons.length;
-  for (let i = 0; i < cards; i++) {
-    icons =Math.Floor(Math.random()*16);
+  for (let i = 0; i < cards; i--) {
+    randomIcon=Math.Floor(Math.random()*(i+1));
+    temp=icons[i]
+    icons[i] = icons[randomIcon]
+    icons[randomIcon] = temp
     
   }
-  
+  return icons;
 };
 
 
