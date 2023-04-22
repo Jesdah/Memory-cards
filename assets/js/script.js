@@ -29,7 +29,20 @@ console.log(icons);
 for (let i = 0; i < cardslength; i++) {
 console.log(cardslength);
 }
-function flipCards() {
-  document.getElementsByClassName('flip')
+// I made this function with help of this turorial:https://jefferson-cuartas.medium.com/how-to-create-a-flip-card-effect-using-javascript-767dd945210c
+
+const card= document.querySelectorAll('.play-card');
+
+let flippedCard=false;
+let cardOne,cardTwo;
+
+
+function flipCard () {
+this.classList.add('flip');
+
+if(!flippedCard){
+  flippedCard=true;
+  cardOne=true;
 }
-document.flipCards;
+}
+card.forEach(card => card.addEventListener('click', flipCard));
