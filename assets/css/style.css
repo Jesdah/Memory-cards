@@ -32,6 +32,16 @@ li {
     padding: 5px;
 }
 
+.play-card {
+    display: flex;
+    background-color: aliceblue;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    transform-style: preserve-3d;
+    transition: transform .5s;
+    transform: scale(1);
+}
 
 /*code was taken from https://www.codingnepalweb.com/build-memory-card-game-html-javascript/
 to get the icons to align in 4x4*/
@@ -40,15 +50,16 @@ to get the icons to align in 4x4*/
   height: calc(100% / 4 - 10px);
   width: calc(100% / 4 - 10px);
 }
-.play-card {
-    display: flex;
-    background-color: aliceblue;
-    align-items: center;
-    justify-content: center;
-    width: 30px;
-    transform-style: preserve-3d;
-    transition: transform .5s
+
+
+/*This code was copied from:
+https://marina-ferreira.github.io/tutorials/js/memory-game/
+to test if the cards respond at all.*/
+.play-card:active {
+    transform: scale(0.97);
+   transition: transform .2s;
 }
+
 .cards {
     display: flex;
     justify-content: space-evenly;
@@ -58,17 +69,19 @@ to get the icons to align in 4x4*/
     position: relative;
     
 }
+/*The front with the magic icon*/
 .front {
     color: rgb(37, 23, 50);
     
 }
 
+/*The hidden side of the card*/
 .back {
     width: 100%;
     position: absolute;
     text-align: center;
 }
-
+/*Flip animation*/
 .front.side,
 .back.side {
     backface-visibility: hidden;
@@ -76,7 +89,7 @@ to get the icons to align in 4x4*/
 .back.side {
     transform: rotateY(-180deg);
 }
-.play-card.flipcard {
+.flipcard {
     transform: rotateY(-180deg);
     
 }
@@ -84,6 +97,7 @@ to get the icons to align in 4x4*/
 .side {
     font-size: 40px;
 }
+/*Media quaries to make the game responsive*/
 @media screen and (max-width:750px) {
 body {
     display: block;
@@ -100,7 +114,7 @@ body {
     }
 }
     
-
+/*footer element*/
 footer {
     position: fixed;
     bottom: 0;

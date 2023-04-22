@@ -1,9 +1,10 @@
-const container =document.querySelectorAll('play-card');
+const card= document.querySelectorAll('.play-card');
 const cardslength = 16;
 const cards = [];
 
-let previousShownCard = undefined;
 
+let flippedCard=false;
+let cardOne,cardTwo;
 
 let icons= ['fa-solid fa-image',
 'fa-solid fa-star',
@@ -25,24 +26,14 @@ for (let i = 0; i < 100; i++) {
   icons[idx1] = icons[idx2];
   icons[idx2] = temp;
 }
-console.log(icons);
-for (let i = 0; i < cardslength; i++) {
-console.log(cardslength);
-}
+
+
+
+
 // I made this function with help of this turorial:https://jefferson-cuartas.medium.com/how-to-create-a-flip-card-effect-using-javascript-767dd945210c
 
-const card= document.querySelectorAll('.play-card');
-
-let flippedCard=false;
-let cardOne,cardTwo;
-
-
 function flipCard () {
-this.classList.add('flip');
+this.classList.toggle('flipcard');
 
-if(!flippedCard){
-  flippedCard=true;
-  cardOne=true;
-}
 }
 card.forEach(card => card.addEventListener('click', flipCard));
