@@ -1,11 +1,6 @@
 const playCard = document.querySelectorAll('.play-card');
-const cardslength = 16;
-let cards = [];
 let playerTimer;
-let playerFlips;
-
-let flippedCard = false;
-let cardOne, cardTwo;
+let playerFlips=0;
 
 let icons = ['fa-solid fa-image',
   'fa-solid fa-star',
@@ -29,14 +24,12 @@ for (let i = 0; i < 100; i++) {
   icons[idx1] = icons[idx2];
   icons[idx2] = temp;
 }
-console.log(icons);
 
 
 
-// I made this function with help of this turorial:https://jefferson-cuartas.medium.com/how-to-create-a-flip-card-effect-using-javascript-767dd945210c
-/*
-function flipCard() 
-  this.classList.toggle('flipcard');*/
+
+
+  /*i got this code from: https://stackoverflow.com/questions/75882658/memory-game-check-for-match-with-javascript*/ 
 let first;
 let second;
 let matchCardCounter=0;
@@ -49,8 +42,8 @@ playCard.forEach(function(card) {
     playerFlips++
     } else if (first && !second) {
       second=card;
-      playerFlips++
-      card.classList.add('flipcard')
+      playerFlips++;
+      card.classList.add('flipcard');
 
       if (first.innerHTML=== second.innerHTML) {
         first=null;
@@ -64,7 +57,7 @@ playCard.forEach(function(card) {
          
           first.classList.remove('flipcard');
           second.classList.remove('flipcard');
-           alert("no match")
+           alert("no match");
            setTimeout(()=> {
             first.classList.remove('flipcard');
             second.classList.remove('flipcard');
@@ -74,13 +67,28 @@ playCard.forEach(function(card) {
         }
       }
     }
-  })
-} ) 
+  });
+} ); 
 
 function countFlips(){
-const playerFlipsDiv=document.getElementById("flips");
+let playerFlipsDiv=document.getElementById("flips");
 
-playerFlipsDiv.textContent= `Flips: ${playerFlips}`
+playerFlipsDiv.innerHTML= `Flips: ${playerFlips}`
+};
+/*This code was copied from:
+https://stackoverflow.com/questions/5517597/plain-count-up-timer-in-javascript*/ 
+playerTimer= setInterval(countTimer,1000);
+let totalSeconds=0;
+function countTimer() {
+  ++totalSeconds;
+  let minute= Math.floor(totalSeconds/60);
+  let seconds= totalSeconds-minute*60;
+  if (minute<10)
+  minute= "0"+minute;
+  if (seconds< 10)
+  seconds="0"+seconds;
+  document.getElementById("timer").innerHTML= `Timer:${minute},${seconds}`;
 }
-
-playCard.forEach(card => card.addEventListener('click', flipCard));
+addEventListener("click",countTimer);
+removeEventListener("All cards match!",countTimer)
+addEventListener("click",countFlips);
