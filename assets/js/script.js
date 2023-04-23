@@ -58,6 +58,7 @@ playCard.forEach(function(card) {
         if (matchCardCounter >=8) {
           alert ("All cards match!");
         } else {
+          alert("no match")
           first.classList.remove('flipcard');
           second.classList.remove('flipcard');
           setTimeout(()=> {
