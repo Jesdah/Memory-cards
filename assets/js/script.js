@@ -1,7 +1,8 @@
 const playCard = document.querySelectorAll('.play-card');
 const cardslength = 16;
 let cards = [];
-
+let playerTimer;
+let playerFlips;
 
 let flippedCard = false;
 let cardOne, cardTwo;
@@ -45,8 +46,10 @@ playCard.forEach(function(card) {
     if (!first && !second) {
     first=card;
     card.classList.add('flipcard');
+    playerFlips++
     } else if (first && !second) {
       second=card;
+      playerFlips++
       card.classList.add('flipcard')
 
       if (first.innerHTML=== second.innerHTML) {
@@ -58,10 +61,11 @@ playCard.forEach(function(card) {
         if (matchCardCounter >=8) {
           alert ("All cards match!");
         } else {
-          alert("no match")
+         
           first.classList.remove('flipcard');
           second.classList.remove('flipcard');
-          setTimeout(()=> {
+           alert("no match")
+           setTimeout(()=> {
             first.classList.remove('flipcard');
             second.classList.remove('flipcard');
             first=null;
@@ -72,5 +76,11 @@ playCard.forEach(function(card) {
     }
   })
 } ) 
+
+function countFlips(){
+const playerFlipsDiv=document.getElementById("flips");
+
+playerFlipsDiv.textContent= `Flips: ${playerFlips}`
+}
 
 playCard.forEach(card => card.addEventListener('click', flipCard));
