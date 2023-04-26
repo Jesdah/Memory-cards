@@ -80,6 +80,7 @@ function countFlips() {
 };
 /*This code was copied from:
 https://stackoverflow.com/questions/5517597/plain-count-up-timer-in-javascript*/
+
 playerTimer = setInterval(countTimer, 1000);
 let totalSeconds = 0;
 function countTimer() {
