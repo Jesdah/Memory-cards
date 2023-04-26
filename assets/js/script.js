@@ -1,6 +1,6 @@
 const playCard = document.querySelectorAll('.play-card');
 let playerTimer;
-let playerFlips=0;
+let playerFlips = 0;
 
 let icons = ['fa-solid fa-image',
   'fa-solid fa-star',
@@ -29,66 +29,69 @@ for (let i = 0; i < 100; i++) {
 
 
 
-  /*i got this code from: https://stackoverflow.com/questions/75882658/memory-game-check-for-match-with-javascript*/ 
+/*i got this code from: https://stackoverflow.com/questions/75882658/memory-game-check-for-match-with-javascript*/
 let first;
 let second;
-let matchCardCounter=0;
+let matchCardCounter = 0;
 
-playCard.forEach(function(card) {
-  card.addEventListener('click', function() {
+playCard.forEach(function (card) {
+  card.addEventListener('click', function () {
     if (!first && !second) {
-    first=card;
-    card.classList.add('flipcard');
-    playerFlips++
+      first = card;
+      card.classList.add('flipcard');
+      playerFlips++
     } else if (first && !second) {
-      second=card;
+      second = card;
       playerFlips++;
       card.classList.add('flipcard');
 
-      if (first.innerHTML=== second.innerHTML) {
-        first=null;
-        second=null;
-        alert ("match");
+      if (first.innerHTML === second.innerHTML) {
+        first = null;
+        second = null;
+        alert("match");
         matchCardCounter++;
 
-        if (matchCardCounter >=8) {
-          alert ("All cards match!");
-        } else {
-         
-          first.classList.remove('flipcard');
-          second.classList.remove('flipcard');
-           alert("no match");
-           setTimeout(()=> {
-            first.classList.remove('flipcard');
-            second.classList.remove('flipcard');
-            first=null;
-            second=null;
-          }, 2000);
+        if (matchCardCounter >= 8) {
+          alert("All cards match!");
         }
       }
-    }
+      else {
+        first.classList.remove('flipcard');
+        second.classList.remove('flipcard');
+        alert("no match");
+        setTimeout(() => {
+          first.classList.remove('flipcard');
+          console.log("fliop cards back ??")
+          second.classList.remove('flipcard');
+          first = null;
+          second = null;
+        }, 2000);
+
+      }
+    
+  }
   });
-} ); 
+});
 
-function countFlips(){
-let playerFlipsDiv=document.getElementById("flips");
+function countFlips() {
+  let playerFlipsDiv = document.getElementById("flips");
 
-playerFlipsDiv.innerHTML= `Flips: ${playerFlips}`
+  playerFlipsDiv.innerHTML = `Flips: ${playerFlips}`
 };
 /*This code was copied from:
-https://stackoverflow.com/questions/5517597/plain-count-up-timer-in-javascript*/ 
-playerTimer= setInterval(countTimer,1000);
-let totalSeconds=0;
+https://stackoverflow.com/questions/5517597/plain-count-up-timer-in-javascript*/
+playerTimer = setInterval(countTimer, 1000);
+let totalSeconds = 0;
 function countTimer() {
   ++totalSeconds;
-  let minute= Math.floor(totalSeconds/60);
-  let seconds= totalSeconds-minute*60;
-  if (minute<10)
-  minute= "0"+minute;
-  if (seconds< 10)
-  seconds="0"+seconds;
-  document.getElementById("timer").innerHTML= `Timer:${minute},${seconds}`;
+  let minute = Math.floor(totalSeconds / 60);
+  let seconds = totalSeconds - minute * 60;
+  if (minute < 10)
+    minute = "0" + minute;
+  if (seconds < 10)
+    seconds = "0" + seconds;
+  document.getElementById("timer").innerHTML = `Timer:${minute},${seconds}`;
 }
-addEventListener("click",countTimer);
-removeEventListener("All cards match!",countTimer)
-addEventListener("click",countFlips);
+addEventListener("click", countTimer);
+removeEventListener("All cards match!", countTimer)
+addEventListener("click", countFlips);
