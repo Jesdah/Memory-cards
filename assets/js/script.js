@@ -16,13 +16,20 @@ icons.push(...icons);
 
 // Shufle icons. copied from: https://github.com/swapnilsparsh/30DaysOfJavaScript/blob/master/27%20-%20Memory%20Matching%20Game/script.js
 
-for (let i = 0; i < 100; i++) {
+for (let i = 0; i < 16; i++) {
   const idx1 = Math.floor(Math.random() * icons.length);
   const idx2 = Math.floor(Math.random() * icons.length);
 
   const temp = icons[idx1];
   icons[idx1] = icons[idx2];
   icons[idx2] = temp;
+  
+  for (let i = 0; i < temp.length; i++)+16; {
+    shuffleCards=document.getElementsByClassName('back');
+    shuffleCards.innerHTML= `<i class="${temp[0]}" aria-label="mountain icon"></i>`
+    
+    
+  }
 }
 
 
@@ -42,7 +49,7 @@ playCard.forEach(function (card) {
       card.classList.add('flipcard');
       playerFlips++
     } else if (first && !second) {
-      if (this===first) return;
+      if (this===first) return;// got this one from: https://marina-ferreira.github.io/tutorials/js/memory-game/
       second = card;
       playerFlips++;
       card.classList.add('flipcard');
