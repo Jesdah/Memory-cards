@@ -63,14 +63,10 @@ playCard.forEach(function (card) {
           document.getElementById('player-text').innerHTML=`All cards match, Congratulations!!`;
         }
       }
-      else {
+      else {setTimeout(() => {
         first.classList.remove('flipcard');
         second.classList.remove('flipcard');
         document.getElementById('player-text').innerHTML=`no match`;
-        setTimeout(() => {
-          first.classList.remove('flipcard');
-          console.log("fliop cards back ??")
-          second.classList.remove('flipcard');
           first = null;
           second = null;
         }, 2000);
