@@ -1,8 +1,13 @@
-const playCard = document.querySelectorAll('.play-card');
-let playerTimer;
-let playerFlips = 0;
+const playCard = document.querySelectorAll('.play-card');// Targets the list items.
+let playerTimer;  // Targets timer in footer.
+let playerFlips = 0;  //Targets Flip counter in footer
+//Targets the Card function.
+let first;                        
+let second;
+let matchCardCounter = 0;
 
-let icons = ['fa-solid fa-image',
+
+let icons = ['fa-solid fa-image',//An Array of icons.
   'fa-solid fa-star',
   'fa-solid fa-heart',
   'fa-solid fa-ghost',
@@ -11,8 +16,7 @@ let icons = ['fa-solid fa-image',
   'fa-solid fa-bicycle',
   'fa-solid fa-feather',
 ];
-
-icons.push(...icons);
+icons.push(...icons);//Copy icons so I can use the two times.
 
 // Shufle icons. copied from: https://github.com/swapnilsparsh/30DaysOfJavaScript/blob/master/27%20-%20Memory%20Matching%20Game/script.js
 
@@ -37,33 +41,36 @@ for (let i = 0; i < 16; i++) {
 
 
 /*i got this code from: https://stackoverflow.com/questions/75882658/memory-game-check-for-match-with-javascript*/
-let first;
-let second;
-let matchCardCounter = 0;
+/** Flipcard function.
+ * This function ensures when a card is clicked it flips
+ * and checks if two cards is matching if not the cards flips 
+ * back to their default position.
+ */
 
 playCard.forEach(function (card) {
   card.addEventListener('click', function () {
     if (!first && !second) {
       first = card;
-      
       card.classList.add('flipcard');
-      playerFlips++
-    } else if (first && !second) {
-      if (this===first) return;// got this one from: https://marina-ferreira.github.io/tutorials/js/memory-game/
-      second = card;
       playerFlips++;
+    } else if (first && !second) {
+      if (this===first) return;/*Ensures that the user can not click on the same
+       card again to get 8 points and win the game,
+        got this one from: https://marina-ferreira.github.io/tutorials/js/memory-game/*/
+      second = card;
+      playerFlips++;//counts flips.
       card.classList.add('flipcard');
  
-      if (first.innerHTML === second.innerHTML) {     
+      if (first.innerHTML === second.innerHTML) { //checks if the two cards are identical.
         first = null;
         second = null;
         matchCardCounter++;
-        document.getElementById('player-text').innerHTML=`You got a match!`;
+        document.getElementById('player-text').innerHTML=`You got a match!`;//confirmation text.
         if (matchCardCounter >= 8) {
-          document.getElementById('player-text').innerHTML=`All cards match, Congratulations!!`;
+          document.getElementById('player-text').innerHTML=`All cards match, Congratulations!!`;//Stops the timer.
         }
       }
-      else {setTimeout(() => {
+      else {setTimeout(() => { //if the cards do not match a timer is set to reset the cards in 2sek.
         first.classList.remove('flipcard');
         second.classList.remove('flipcard');
         document.getElementById('player-text').innerHTML=`no match`;
@@ -77,27 +84,32 @@ playCard.forEach(function (card) {
   });
 });
 
-function countFlips() {
+function countFlips() {//counts the number of flips done by the user.
+  //targets "Flips:" in footer
   let playerFlipsDiv = document.getElementById("flips");
-
   playerFlipsDiv.innerHTML = `Flips: ${playerFlips}`
 };
-/*This code was copied from:
-https://stackoverflow.com/questions/5517597/plain-count-up-timer-in-javascript*/
 
+/**countTimer
+ * This function sets a count up timer wich triggers when the 
+ * user flips the first card and stops when all cards match.
+ * The CountTimer targets "Timer" in the footer.
+ * This code was copied from:
+https://stackoverflow.com/questions/5517597/plain-count-up-timer-in-javascript
+ */
 playerTimer = setInterval(countTimer, 1000);
 let totalSeconds = 0;
 function countTimer() {
-  if (playerFlips >=1)
+  if (playerFlips >=1) //Gets it's value from countFlips function.
   ++totalSeconds;
-  let minute = Math.floor(totalSeconds / 60);
+  let minute = Math.floor(totalSeconds / 60);//Sets the format "00:00"
   let seconds = totalSeconds - minute * 60;
   if (minute < 10)
     minute = "0" + minute;
   if (seconds < 10)
     seconds = "0" + seconds;
-  document.getElementById("timer").innerHTML = `Timer:${minute},${seconds}`;
-  if (matchCardCounter >= 8) {
+  document.getElementById("timer").innerHTML = `Timer:${minute},${seconds}`;//Targets "Timer" in footer.
+  if (matchCardCounter >= 8) {//Stops timer.
 clearInterval(playerTimer);
 
 }
@@ -129,4 +141,4 @@ window.onclick = function(event) {
   }
 }
 
-addEventListener("click", countFlips);
+addEventListener("click", countFlips);//Event listener for the countFlips function.
