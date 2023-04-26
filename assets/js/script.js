@@ -91,7 +91,11 @@ function countTimer() {
   if (seconds < 10)
     seconds = "0" + seconds;
   document.getElementById("timer").innerHTML = `Timer:${minute},${seconds}`;
+  if (matchCardCounter >= 8) {
+clearInterval(playerTimer);
 }
-addEventListener("click", countTimer);
-removeEventListener("All cards match!", countTimer)
+}
+
+
+
 addEventListener("click", countFlips);
