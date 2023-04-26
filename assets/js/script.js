@@ -38,16 +38,19 @@ playCard.forEach(function (card) {
   card.addEventListener('click', function () {
     if (!first && !second) {
       first = card;
+      
       card.classList.add('flipcard');
       playerFlips++
     } else if (first && !second) {
+      if (this===first) return;
       second = card;
       playerFlips++;
       card.classList.add('flipcard');
-
+ 
       if (first.innerHTML === second.innerHTML) {
         first = null;
         second = null;
+       
         alert("match");
         matchCardCounter++;
 
@@ -84,6 +87,7 @@ https://stackoverflow.com/questions/5517597/plain-count-up-timer-in-javascript*/
 playerTimer = setInterval(countTimer, 1000);
 let totalSeconds = 0;
 function countTimer() {
+  if (playerFlips >=1)
   ++totalSeconds;
   let minute = Math.floor(totalSeconds / 60);
   let seconds = totalSeconds - minute * 60;
@@ -94,9 +98,9 @@ function countTimer() {
   document.getElementById("timer").innerHTML = `Timer:${minute},${seconds}`;
   if (matchCardCounter >= 8) {
 clearInterval(playerTimer);
-}
-}
 
+}
+}
 
 
 addEventListener("click", countFlips);
