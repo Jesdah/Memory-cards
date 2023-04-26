@@ -54,21 +54,19 @@ playCard.forEach(function (card) {
       playerFlips++;
       card.classList.add('flipcard');
  
-      if (first.innerHTML === second.innerHTML) {
+      if (first.innerHTML === second.innerHTML) {     
         first = null;
         second = null;
-       
-        alert("match");
         matchCardCounter++;
-
+        document.getElementById('player-text').innerHTML=`You got a match!`;
         if (matchCardCounter >= 8) {
-          alert("All cards match!");
+          document.getElementById('player-text').innerHTML=`All cards match, Congratulations!!`;
         }
       }
       else {
         first.classList.remove('flipcard');
         second.classList.remove('flipcard');
-        alert("no match");
+        document.getElementById('player-text').innerHTML=`no match`;
         setTimeout(() => {
           first.classList.remove('flipcard');
           console.log("fliop cards back ??")
