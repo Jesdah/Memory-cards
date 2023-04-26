@@ -114,7 +114,24 @@ body {
         font-size: 20px;
     }
 }
-    
+
+/*This code structure was taken from:https://www.w3schools.com/howto/howto_css_modals.asp*/
+#myBtn {
+    background-color:red;                       
+}
+#myModal {
+    background-color: blueviolet;
+}
+.modal {
+    background-color: blue;
+}
+.modal-content {
+    background-color: beige;
+}
+.close {
+    background-color: pink;
+}
+
 /*footer element*/
 footer {
     position: fixed;
