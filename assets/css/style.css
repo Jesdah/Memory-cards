@@ -19,11 +19,14 @@ body {
 .play-ground {
     display: flex;
     justify-content: center;
-    background-color: brown;
+    background-color: rgb(46,139,87);
     padding: 20px;
     margin: 50px;
     width: 500px;
-    border-radius: 50px
+    border-radius: 50px;
+    border:2px solid;
+    border-color:rgb(1, 126, 126);
+    
     
 
     
@@ -99,30 +102,14 @@ to test if the cards respond at all.*/
 .side {
     font-size: 40px;
 }
-/*Media quaries to make the game responsive*/
-@media screen and (max-width:750px) {
-body {
-    display: block;
-}
-}
-@media screen and (max-width:600px) {
-    .play-ground {
-        width: 100%;
-        margin:0;
-        padding: 0;
-        border-radius: 0;
-    }
-    .side {
-        font-size: 20px;
-    }
-}
+
 
 /*This code structure was taken from:https://www.w3schools.com/howto/howto_css_modals.asp*/
 #myBtn {
     background-color:aqua; 
     border-radius: 50px;
     display: inline-block;
-    border: -8px;
+    border: 1px solid;
     border-color: rgb(1, 126, 126);
     height: 30px;
     width: 110px;
@@ -148,7 +135,6 @@ body {
     background-color: blue;
 }
 .modal-content {
-    background-color: beige, 0,4;
     text-align: center;
     top: 50%;
     left: 50%;
@@ -186,4 +172,37 @@ footer {
     display: flex;
     align-items: center;
     justify-content: space-evenly;
+}
+/*Media quaries to make the game responsive*/
+@media screen and (max-width:750px) {
+body {
+    display: block;
+}
+#bottom {
+    bottom: 17%;
+}
+
+}
+@media screen and (max-width:600px) {
+    .play-ground {
+        width: 100%;
+        margin:0;
+        padding: 0;
+        border-radius: 0;
+    }
+    .side {
+        font-size: 30px;
+    }
+}
+@media screen and (max-width:450px) {
+    .modal-content {
+        font-size: 11px;
+    }
+    #player-text {
+        font-size: 16px;
+    }
+    .modal-content{
+        width: 90%;
+    }
+    
 }
