@@ -84,7 +84,7 @@ playCard.forEach(function (card) {
       else {setTimeout(() => { //if the cards do not match a timer is set to reset the cards in 2sek.
         first.classList.remove('flipcard');
         second.classList.remove('flipcard');
-        document.getElementById('player-text').innerHTML=`no match`;
+        document.getElementById('player-text').innerHTML=`No match`;
           first = null;
           second = null;
         }, 2000);
