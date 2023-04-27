@@ -7,7 +7,7 @@ let second;
 let matchCardCounter = 0;
 
 
-let icons = ['fa-solid fa-image',//An Array of icons.
+var icons = ['fa-solid fa-image',//An Array of icons.
   'fa-solid fa-star',
   'fa-solid fa-heart',
   'fa-solid fa-ghost',
@@ -20,7 +20,7 @@ icons.push(...icons);//Copy icons so I can use the two times.
 
 // Shufle icons. copied from: https://github.com/swapnilsparsh/30DaysOfJavaScript/blob/master/27%20-%20Memory%20Matching%20Game/script.js
 
-for (let i = 0; i < 16; i++) {
+/*for (let i = 0; i < 16; i++) {
   const idx1 = Math.floor(Math.random() * icons.length);
   const idx2 = Math.floor(Math.random() * icons.length);
 
@@ -34,6 +34,16 @@ for (let i = 0; i < 16; i++) {
     
     
   }
+}*/
+
+//test 
+function shuffleCards(icons) {
+  for (let i = icons.length - 1; i > 0; i--) {
+    const idx1 = Math.floor(Math.random() * (i+1));
+    const idx2 = Math.floor(Math.random() * (i+1));
+    [icons[idx1]],[icons[idx2]]=[icons[idx1]],[icons[idx2]]
+  }
+  console.log(icons[idx1]);
 }
 
 
