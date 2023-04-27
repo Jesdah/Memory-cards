@@ -135,7 +135,7 @@ body {
 }
 
 #myModal {
-    background-color: blueviolet;
+    background-color:rgb(173,216,230,0.9);
     top: 50%;
     left: 50%;
     position: absolute;
@@ -148,7 +148,7 @@ body {
     background-color: blue;
 }
 .modal-content {
-    background-color: beige;
+    background-color: beige, 0,4;
     text-align: center;
     top: 50%;
     left: 50%;
@@ -171,6 +171,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-evenly;
+    flex-direction: column-reverse;
     height: 100px;
 }
 
