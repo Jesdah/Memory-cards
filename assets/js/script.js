@@ -42,8 +42,9 @@ function shuffleCards(icons) {
     const idx1 = Math.floor(Math.random() * (i+1));
     const idx2 = Math.floor(Math.random() * (i+1));
     [icons[idx1]],[icons[idx2]]=[icons[idx1]],[icons[idx2]]
+    
   }
-  console.log(icons[idx1]);
+  shuffleCards(icons)
 }
 
 
