@@ -1,108 +1,142 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+![screenshot of the site on different devices](/assets/images/am-i-responsive.png)
+# Magic Cards game! 
+## This is a Memory cards game, flip the cards and find a matching pair.
+Magic cards is a game where you flip cards to find a matching pair. Match all the cards and the timer stops, do it again and improve your time.
+### Modal.
+![screenshot of two old cottages with grassroof](/assets/images/screenshot-cottage.png)
+The user is greeted with an modal, it discribes to the user the rules of the game, and the user can easily close the modal and start playing.
+### The playground.
+![screenshot of the play-ground](/assets/images/navbar.png)
+* On the playgroung there is 16 cards with the faces down.
+* The user clicks a card and a flip animation is triggerd reveiling the face of the card
+### Player text.
+![Screenshot of some welcome text](/assets/images/welcome.png)<br>
+The purpose is for the user to receive a confirmation whether the user received a match or not.
 
-Welcome Jesper Dahlberg,
+### The Footer.
+![Screenshot of the stone footer with icons to social media and contact information](/assets/images/stone-footer.png)
+* The footer is placed at the bottom of the page with a black background color.
+* In the footer we find a timer and a "flip" counter.
+* The footer is responsive on all devices
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
 
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **September 1, 2021**
+### Existing features.
+* Responsive design
+* Flip function 
+* Match function
+* Shuffle function
+* modal
+### Features left to implement.
+I would like to implement IFRAME in the #contact section with a working map.
+### Technologies.
+* HTML
+    * The structure of the Website was developed using HTML as the main language.
+* CSS
+    * The website was styled using css in a seperate file.
+* Git
+    * Used to commit and push code during the development of the Website
+* Git hub
+    * Source code is hosted on GitHub and delpoyed using Git Pages.
+* JavaScript
 
-## Gitpod Reminders
+* [Fontawesome](https://fontawesome.com/)
+    * Is used to download icons used in the cards.
+## Testing.
+### Responsivenes.
+The site were tested to ensure responsiveness on screen sizes from 320px and upwards on Chrome and Edge.
+### Steps to test:
+1. Open browser and navigate to [Viking weekend](/index.html).
+2. Open the developer tools (right click and inspect)
+3. Set to responsive and decrease width to 320px
+4. Set the zoom to 50%
+5. Click and drag the responsive window to maximum width
+### Expected:
+Website is responsive on all screen sizes and no images are pixelated or stretched. No horizontal scroll is present. No elements overlap.
+### Actual:
+Website is responsive on all screen sizes and no images are pixelated or stretched. No horizontal scroll is present. No elements overlap.
+### Website was also opened on the following devices and no responsive issues were seen:
+* Samsung S22
+* Iphone 13
+* Lenovo ideapad S340
+## Lighthouse Testing.
+![screenshot of index.html lighthouse score](/assets/images/lighthouse-index.png)<br>
+![screenshot of events.html lighthouse score](/assets/images/lighthouse-event.png)<br>
+![screenshot of gallery.html lighthouse score](/assets/images/lighthouse-gallery.png)<br>
+![screenshot of signup.html lighthouse score](/assets/images/lighthouse-signup.png)
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
 
-`python3 -m http.server`
+### Form Testing.
+The form on the signup page was tested to ensure it functioned as expected when correct data was input and when incorrect data was input.<br>
+Steps to test:
+1. Navigate to [Viking weekend signup page.](https://jesdah.github.io/Viking_weekend/signup.html)
+2. Scroll down to the form and input the following data:
+   - First Name: John
+   - Last Name: Doe
+   - Email: doe.john@test.com
+   - Phonenumber: 123456789
+   - age: 8
+   - Allergies: none
+   - Dates: select a date
+   - Anything else you like to add?: This is optional
+3. Click Submit
+4. User should be redirected to thank-you.html confirmation page.<br>
+### Expected:
 
-A blue button should appear to click: _Make Public_,
+Form submits with no warnings or errors and user is redirected to index.html confirmation page.
 
-Another blue button should appear to click: _Open Browser_.
+### Actual:
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+Website behaved as expected with no errors or warnings and redirected to index.html.<br>
+If a required field is missing the user will not be able to submit and an error field will be displayed.
+### Footer Social Media Icons / Links
+Testing was performed on the Font Awesome Social Media icons in the footer to ensure that each one opened in a new tab.
 
-A blue button should appear to click: _Make Public_,
+Each item opened a new tab when clicked as expected.
 
-Another blue button should appear to click: _Open Browser_.
+### Validator Testing
+- HTML
+  - No errors were returned when passing through the official [W3C validator](https://validator.w3.org)
+  ![validator result index.html](/assets/images/validator-index.png)<br>
+  ![validator result events.html](/assets/images/validator-events.png)<br>
+  ![validator result gallery.html](/assets/images/validator-gallery.png)<br>
+  ![validator result signup.html](/assets/images/validator-signup.png)<br>
+  ![validator result thank-you.html](/assets/images/validator-thank-you.png)
+- CSS
+  - No errors were found when passing through the official [(Jigsaw) validator](https://jigsaw.w3.org)
+  ![validator result css](/assets/images/validator-css-vikingweekend.png)
+### Unfixed Bugs
+No bugs unfixed.
+### Deployment.
+The following git commands were used throughout development to push code to the remote repo:
 
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
-
-To log into the Heroku toolbelt CLI:
-
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
-
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
-
-------
-
-## Release History
-
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
-
-**September 1 2021:** Remove `PGHOSTADDR` environment variable.
-
-**July 19 2021:** Remove `font_fix` script now that the terminal font issue is fixed.
-
-**July 2 2021:** Remove extensions that are not available in Open VSX.
-
-**June 30 2021:** Combined the P4 and P5 templates into one file, added the uptime script. See the FAQ at the end of this file.
-
-**June 10 2021:** Added: `font_fix` script and alias to fix the Terminal font issue
-
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
-
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
-
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
-
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
-
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
-
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
-
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
-
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
-
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
-
-------
-
-## FAQ about the uptime script
-
-**Why have you added this script?**
-
-It will help us to calculate how many running workspaces there are at any one time, which greatly helps us with cost and capacity planning. It will help us decide on the future direction of our cloud-based IDE strategy.
-
-**How will this affect me?**
-
-For everyday usage of Gitpod, it doesn’t have any effect at all. The script only captures the following data:
-
-- An ID that is randomly generated each time the workspace is started.
-- The current date and time
-- The workspace status of “started” or “running”, which is sent every 5 minutes.
-
-It is not possible for us or anyone else to trace the random ID back to an individual, and no personal data is being captured. It will not slow down the workspace or affect your work.
-
-**So….?**
-
-We want to tell you this so that we are being completely transparent about the data we collect and what we do with it.
-
-**Can I opt out?**
-
-Yes, you can. Since no personally identifiable information is being captured, we'd appreciate it if you let the script run; however if you are unhappy with the idea, simply run the following commands from the terminal window after creating the workspace, and this will remove the uptime script:
-
+```git add <file>``` - This command was used to add the file(s) to the staging area before they are committed.<br>
+```git commit -m “commit message”``` - This command was used to commit changes to the local repository queue ready for the final step.<br>
+```git push``` - This command was used to push all committed code to the remote repository on github.
+### Deployment to Github Pages
+- The site was deployed to GitHub pages. The steps to deploy are as follows: 
+  - In the GitHub repository, navigate to the Settings tab 
+  - From the menu on left select 'Pages'
+  - From the source section drop-down menu, select the Branch: main
+  - Click 'Save'
+  - A live link will be displayed in a green banner when published successfully. 
+The live link can be found here. https://jesdah.github.io/Viking_weekend/
+### Clone the Repository Code Locally
+Navigate to the GitHub Repository you want to clone to use locally:
+- Click on the code drop down button
+- Click on HTTPS
+- Copy the repository link to the clipboard
+- Open your IDE of choice (git must be installed for the next steps)
+- Type git clone copied-git-url into the IDE terminal
+The project will now been cloned on your local machine for use.
+### Credit.
+* The code for the navbar is taken from the [loverunning project](https://github.com/Code-Institute-Solutions/love-running-2.0-sourcecode/blob/main/07-gallery/02-gallery-images/index.html)
+* I learned how to use flex [w3schools](https://www.w3schools.com/css/css3_flexbox_responsive.asp)and at [Flexboxfroggy](https://www.flexboxfroggy.com/)
+* I got the code to make the thank-you page redirect to the homepage from gareth_mentor:
 ```
-pkill uptime.sh
-rm .vscode/uptime.sh
+<meta http-equiv="refresh" content="10; url=index.html">
 ```
-
-**Anything more?**
-
-Yes! We'd strongly encourage you to look at the source code of the `uptime.sh` file so that you know what it's doing. As future software developers, it will be great practice to see how these shell scripts work.
-
----
-
-Happy coding!
+* I have used [w3schools](https://www.w3schools.com/) a lot for inspiration and tips and tricks
+* To compress images I have used [squoosh](https://squoosh.app/editor)
+* To get a fixed footer I have taken the code from [w3schools](https://www.w3schools.com/howto/howto_css_fixed_footer.asp)
+* For symbols in the footer I have used [Fontawesome](https://fontawesome.com/)
+* I found the pictures at [pexels](https://www.pexels.com/sv-se/)
