@@ -121,12 +121,19 @@ body {
 }
 #myModal {
     background-color: blueviolet;
+    position: absolute;
+    width: 100%;
+    height: 153px;
 }
 .modal {
     background-color: blue;
 }
 .modal-content {
     background-color: beige;
+    text-align: center;
+    top: 46%;
+    position: absolute;
+    left: 33%;
 }
 .close {
     background-color: pink;
