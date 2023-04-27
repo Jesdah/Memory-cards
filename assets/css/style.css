@@ -127,7 +127,7 @@ body {
     position: absolute;
     transform: translate(-50%, -50%);
     width: 90%;
-    height: 40%;
+    height: 70%;
 }
 .modal {
     background-color: blue;
@@ -143,6 +143,7 @@ body {
 }
 .close {
     background-color: pink;
+    display: none;
 }
 #player-text {
     font-size: 30px;
