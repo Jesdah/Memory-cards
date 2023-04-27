@@ -121,9 +121,12 @@ body {
 }
 #myModal {
     background-color: blueviolet;
+    top: 50%;
+    left: 50%;
     position: absolute;
-    width: 100%;
-    height: 153px;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    height: 40%;
 }
 .modal {
     background-color: blue;
@@ -131,12 +134,21 @@ body {
 .modal-content {
     background-color: beige;
     text-align: center;
-    top: 46%;
+    top: 50%;
+    left: 50%;
     position: absolute;
-    left: 33%;
+    transform: translate(-50%, -50%);
+    
 }
 .close {
     background-color: pink;
+}
+#player-text {
+    font-size: 30px;
+    position: absolute;
+    bottom: 15%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 /*footer element*/
