@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,11 +8,14 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <title>Document</title>
 </head>
+
 <body>
     <div id="head">
-    <h1>Magic cards</h1>
-    <h2>Can you find the pairs? </h2></div>
-    <div class="play-ground"> <!--16 listitems representing cards-->
+        <h1>Magic cards</h1>
+        <h2>Can you find the pairs? </h2>
+    </div>
+    <div class="play-ground">
+        <!--16 listitems representing cards-->
         <ul class="cards" id="cards">
             <li class="play-card">
                 <div class="front side">
@@ -55,7 +59,7 @@
             </li>
             <li class="play-card">
                 <div class="front side">
-                    <i class="fa-solid fa-wand-magic-sparkles"aria-label="hidden card"></i>
+                    <i class="fa-solid fa-wand-magic-sparkles" aria-label="hidden card"></i>
                 </div>
                 <div class="back side">
                     <i class="fa-solid fa-heart" aria-label="heart icon"></i>
@@ -144,26 +148,29 @@
 
         </ul>
     </div>
-    <!-- Trigger/Open The Modal -->
-<button id="myBtn">Open Modal</button>
+    <div id="bottom">
+        <!-- Trigger/Open The Modal -->
+        <button id="myBtn">Open Modal</button>
+        <div id="player-text">Placeholder</div>
+    </div>
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
 
-<!-- The Modal -->
-<div id="myModal" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <p>Some text in the Modal..</p>
+        </div>
 
-  <!-- Modal content -->
-  <div class="modal-content">
-    <span class="close">&times;</span>
-    <p>Some text in the Modal..</p>
-  </div>
+    </div>
 
-</div>
-<div id="player-text">Placeholder</div>
     <footer>
         <div id="flips">Flips: 0</div>
         <div id="timer">Timer: 0</div>
     </footer>
     <!--fontawesome-->
-<script src="https://kit.fontawesome.com/e5835b6c0f.js" crossorigin="anonymous"></script>
-<script src="assets/js/script.js"></script>   
+    <script src="https://kit.fontawesome.com/e5835b6c0f.js" crossorigin="anonymous"></script>
+    <script src="assets/js/script.js"></script>
 </body>
+
 </html>

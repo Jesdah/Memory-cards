@@ -117,7 +117,8 @@ body {
 
 /*This code structure was taken from:https://www.w3schools.com/howto/howto_css_modals.asp*/
 #myBtn {
-    background-color:red;                       
+    background-color:red; 
+                        
 }
 #myModal {
     background-color: blueviolet;
@@ -145,10 +146,16 @@ body {
 }
 #player-text {
     font-size: 30px;
+    
+}
+#bottom {
     position: absolute;
-    bottom: 15%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    width: 100%;
+    bottom: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 100px;
 }
 
 /*footer element*/
