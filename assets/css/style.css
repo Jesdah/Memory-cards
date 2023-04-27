@@ -119,9 +119,21 @@ body {
 
 /*This code structure was taken from:https://www.w3schools.com/howto/howto_css_modals.asp*/
 #myBtn {
-    background-color:red; 
-    border-radius: 50px            
+    background-color:aqua; 
+    border-radius: 50px;
+    display: inline-block;
+    border: -8px;
+    border-color: rgb(1, 126, 126);
+    height: 30px;
+    width: 110px;
+             
 }
+
+#myBtn:hover {
+    background-color:rgb(1, 126, 126);
+    color: beige;
+}
+
 #myModal {
     background-color: blueviolet;
     top: 50%;
