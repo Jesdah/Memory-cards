@@ -13,10 +13,10 @@ body {
     align-items: center;
     justify-content: flex-start;
 }
-#head {
+#head { /*header div*/
     margin: 10px;
 }
-.play-ground {
+.play-ground {  /*"body" div*/
     display: flex;
     justify-content: center;
     background-color: rgb(46,139,87);
@@ -26,18 +26,14 @@ body {
     border-radius: 50px;
     border:2px solid;
     border-color:rgb(1, 126, 126);
-    
-    
-
-    
 
 }
-li {
+li {/*All the list items*/
     list-style: none;
     padding: 5px;
 }
 
-.play-card {
+.play-card { /*Id of list items*/
     display: flex;
     background-color: aliceblue;
     align-items: center;
@@ -50,7 +46,7 @@ li {
 
 /*code was taken from https://www.codingnepalweb.com/build-memory-card-game-html-javascript/
 to get the icons to align in 4x4*/
-.cards .play-card {
+.cards .play-card { 
     cursor: pointer;
   height: calc(100% / 4 - 10px);
   width: calc(100% / 4 - 10px);
@@ -65,7 +61,7 @@ to test if the cards respond at all.*/
    transition: transform .2s;
 }
 
-.cards {
+.cards {    /*Targets unorderd list item*/
     display: flex;
     justify-content: space-evenly;
     align-items: center;
@@ -94,7 +90,7 @@ to test if the cards respond at all.*/
 .back.side {
     transform: rotateY(-180deg);
 }
-.flipcard {
+.flipcard { /*Targets the flipfunction*/
     transform: rotateY(-180deg);
     
 }
@@ -131,9 +127,7 @@ to test if the cards respond at all.*/
     height: 70%;
     border-radius: 50px
 }
-.modal {
-    background-color: blue;
-}
+
 .modal-content {
     text-align: center;
     top: 50%;
@@ -142,14 +136,14 @@ to test if the cards respond at all.*/
     transform: translate(-50%, -50%);
     
 }
-.close {
-    background-color: pink;
+.close {/*Close button*/
     display: none;
 }
 #player-text {
     font-size: 30px;
     
 }
+/*Targets the buttom div wich contains the button and player-text*/
 #bottom {
     position: absolute;
     width: 100%;
