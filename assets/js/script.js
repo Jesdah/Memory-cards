@@ -103,7 +103,6 @@ playCard.forEach(function (card) {
   card.addEventListener('click', function () {
     if (!first && !second) {
       first = card;
-      
       card.classList.add('flipcard');
       playerFlips++;
       console.log(first)
@@ -116,7 +115,7 @@ playCard.forEach(function (card) {
       playerFlips++;//counts flips.
       card.classList.add('flipcard');
  
-      if (first === second) { //checks if the two cards are identical.
+      if (first.innerHTML === second.innerHTML) { //checks if the two cards are identical.
         console.log(first.innerHTML);
         first = null;
         second = null;
@@ -201,3 +200,4 @@ window.onclick = function(event) {  // When the user clicks anywhere outside of 
 }
 
 addEventListener("click", countFlips);//Event listener for the countFlips function.
+addEventListener('click',executeShuffle)
