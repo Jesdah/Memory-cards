@@ -7,7 +7,7 @@ let second;
 let matchCardCounter = 0;
 
 
-var icons = ['fa-solid fa-image',//An Array of icons.
+let icons = ['fa-solid fa-image',//An Array of icons.
   'fa-solid fa-star',
   'fa-solid fa-heart',
   'fa-solid fa-ghost',
@@ -19,23 +19,47 @@ var icons = ['fa-solid fa-image',//An Array of icons.
 icons.push(...icons);//Copy icons so I can use the two times.
 
 // Shufle icons. from: https://github.com/swapnilsparsh/30DaysOfJavaScript/blob/master/27%20-%20Memory%20Matching%20Game/script.js
-function shuffleIcons (icons) {
-for (let i = icons.length - 1; i > 0; i--) {
+function shuffleIcons(icons) {
+for (let i = icons.length- 1; i > 0; i--) {
   const idx1 = Math.floor(Math.random() * icons.length);
   const idx2 = Math.floor(Math.random() * icons.length);
 
   const temp = icons[idx1];
   icons[idx1] = icons[idx2];
   icons[idx2] = temp;
+  
 }
 
-if (executeShuffle()) {
-shuffleIcons(icons)=document.getElementsByClassName('back');
+}
+//shuffleIcons(icons)=document.getElementsByClassName('back');
+function executeShuffle() {
+document.getElementsByClassName('back side').innerHTML= `<i class="${icons}></i>`;
 let randomIcon=shuffleIcons(icons)
 
-randomIcon.innerHTML= `<i class="${icons}></i>`
+
+
+
+console.log(icons[0]);
+console.log(icons[1]);
+console.log(icons[2]);
+console.log(icons[3]);
+console.log(icons[4]);
+console.log(icons[5]);
+console.log(icons[6]);
+console.log(icons[7]);
+console.log(icons[8]);
+console.log(icons[9]);
+console.log(icons[10]);
+console.log(icons[11]);
+console.log(icons[12]);
+console.log(icons[13]);
+console.log(icons[14]);
+console.log(icons[15]);
+
+
 }
-}
+
+
 //test 
 /*function shuffleCards(icons) {
   for (let i = icons.length - 1; i > 0; i--) {
