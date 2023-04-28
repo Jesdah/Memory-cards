@@ -18,7 +18,7 @@ var icons = ['fa-solid fa-image',//An Array of icons.
 ];
 icons.push(...icons);//Copy icons so I can use the two times.
 
-// Shufle icons. copied from: https://github.com/swapnilsparsh/30DaysOfJavaScript/blob/master/27%20-%20Memory%20Matching%20Game/script.js
+// Shufle icons. from: https://github.com/swapnilsparsh/30DaysOfJavaScript/blob/master/27%20-%20Memory%20Matching%20Game/script.js
 
 /*for (let i = 0; i < 16; i++) {
   const idx1 = Math.floor(Math.random() * icons.length);
@@ -51,11 +51,13 @@ function shuffleCards(icons) {
 
 
 
-/*i got this code from: https://stackoverflow.com/questions/75882658/memory-game-check-for-match-with-javascript*/
+
 /** Flipcard function.
  * This function ensures when a card is clicked it flips
  * and checks if two cards is matching if not the cards flips 
  * back to their default position.
+ * I got this code from:
+ *  https://stackoverflow.com/questions/75882658/memory-game-check-for-match-with-javascript
  */
 
 playCard.forEach(function (card) {
@@ -105,7 +107,7 @@ function countFlips() {//counts the number of flips done by the user.
  * This function sets a count up timer wich triggers when the 
  * user flips the first card and stops when all cards match.
  * The CountTimer targets "Timer" in the footer.
- * This code was copied from:
+ * This code structure was copied from:
 https://stackoverflow.com/questions/5517597/plain-count-up-timer-in-javascript
  */
 playerTimer = setInterval(countTimer, 1000);

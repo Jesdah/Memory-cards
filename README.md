@@ -151,14 +151,20 @@ Navigate to the GitHub Repository you want to clone to use locally:
 - Type git clone copied-git-url into the IDE terminal
 The project will now been cloned on your local machine for use.
 ### Credit.
-* The code for the navbar is taken from the [loverunning project](https://github.com/Code-Institute-Solutions/love-running-2.0-sourcecode/blob/main/07-gallery/02-gallery-images/index.html)
-* I learned how to use flex [w3schools](https://www.w3schools.com/css/css3_flexbox_responsive.asp)and at [Flexboxfroggy](https://www.flexboxfroggy.com/)
-* I got the code to make the thank-you page redirect to the homepage from gareth_mentor:
-```
-<meta http-equiv="refresh" content="10; url=index.html">
-```
+* The code structure for shuffeling the cards was taken from: https://github.com/swapnilsparsh/30DaysOfJavaScript/blob/master/27%20-%20Memory%20Matching%20Game/script.js
+
+* The code structure for flip function and match function was taken from: https://stackoverflow.com/questions/75882658/memory-game-check-for-match-with-javascript
+
+* The this===first code to ensure that the player couldnt click the same card multible times to win the game was taken from: https://marina-ferreira.github.io/tutorials/js/memory-game/
+
 * I have used [w3schools](https://www.w3schools.com/) a lot for inspiration and tips and tricks
-* To compress images I have used [squoosh](https://squoosh.app/editor)
-* To get a fixed footer I have taken the code from [w3schools](https://www.w3schools.com/howto/howto_css_fixed_footer.asp)
-* For symbols in the footer I have used [Fontawesome](https://fontawesome.com/)
-* I found the pictures at [pexels](https://www.pexels.com/sv-se/)
+
+* The code stucture for the timer start and stop funtion was take from: https://stackoverflow.com/questions/5517597/plain-count-up-timer-in-javascript
+
+* The code for the modal was taken from: https://www.w3schools.com/howto/howto_css_modals.asp
+
+* For icons on the cards I have used: [Fontawesome](https://fontawesome.com/)
+
+* To align the cards in 4x4 I have used code from: https://www.codingnepalweb.com/build-memory-card-game-html-javascript/
+
+* To make the cards act resonsive when the user clicks them I have used code from: https://marina-ferreira.github.io/tutorials/js/memory-game/
