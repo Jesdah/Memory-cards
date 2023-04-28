@@ -19,18 +19,18 @@ let icons = ['fa-solid fa-image',//An Array of icons.
 icons.push(...icons);//Copy icons so I can use the two times.
 
 // Shufle icons. from: https://github.com/swapnilsparsh/30DaysOfJavaScript/blob/master/27%20-%20Memory%20Matching%20Game/script.js
-function shuffleIcons(icons) {
+
 for (let i = icons.length- 1; i > 0; i--) {
   const idx1 = Math.floor(Math.random() * icons.length);
   const idx2 = Math.floor(Math.random() * icons.length);
 
-  const temp = icons[idx1];
+  let temp = icons[idx1];
   icons[idx1] = icons[idx2];
   icons[idx2] = temp;
   
 }
 
-}
+
 //shuffleIcons(icons)=document.getElementsByClassName('back');
 function executeShuffle() {
 document.getElementById('0').innerHTML= `<i class="${icons[0]}"></i>`;
