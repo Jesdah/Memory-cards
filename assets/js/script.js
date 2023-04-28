@@ -19,25 +19,25 @@ var icons = ['fa-solid fa-image',//An Array of icons.
 icons.push(...icons);//Copy icons so I can use the two times.
 
 // Shufle icons. from: https://github.com/swapnilsparsh/30DaysOfJavaScript/blob/master/27%20-%20Memory%20Matching%20Game/script.js
-
-/*for (let i = 0; i < 16; i++) {
+function shuffleIcons (icons) {
+for (let i = icons.length - 1; i > 0; i--) {
   const idx1 = Math.floor(Math.random() * icons.length);
   const idx2 = Math.floor(Math.random() * icons.length);
 
   const temp = icons[idx1];
   icons[idx1] = icons[idx2];
   icons[idx2] = temp;
-  
-  for (let i = 0; i < temp.length; i++)+16; {
-    shuffleCards=document.getElementsByClassName('back');
-    shuffleCards.innerHTML= `<i class="${temp[0]}" aria-label="mountain icon"></i>`
-    
-    
-  }
-}*/
+}
 
+if (executeShuffle()) {
+shuffleIcons(icons)=document.getElementsByClassName('back');
+let randomIcon=shuffleIcons(icons)
+
+randomIcon.innerHTML= `<i class="${icons}></i>`
+}
+}
 //test 
-function shuffleCards(icons) {
+/*function shuffleCards(icons) {
   for (let i = icons.length - 1; i > 0; i--) {
     const idx1 = Math.floor(Math.random() * (i+1));
     const idx2 = Math.floor(Math.random() * (i+1));
@@ -45,7 +45,7 @@ function shuffleCards(icons) {
     
   }
   shuffleCards(icons)
-}
+}*/
 
 
 
