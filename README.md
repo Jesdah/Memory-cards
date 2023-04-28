@@ -27,7 +27,7 @@ The purpose is for the user to receive a confirmation whether the user received 
 * Shuffle function
 * modal
 ### Features left to implement.
-I would like to implement IFRAME in the #contact section with a working map.
+I would like to implement a scoreboard.
 ### Technologies.
 * HTML
     * The structure of the Website was developed using HTML as the main language.
@@ -38,6 +38,7 @@ I would like to implement IFRAME in the #contact section with a working map.
 * Git hub
     * Source code is hosted on GitHub and delpoyed using Git Pages.
 * JavaScript
+    * The site was scripted using JavaScript.
 
 * [Fontawesome](https://fontawesome.com/)
     * Is used to download icons used in the cards.
@@ -65,33 +66,54 @@ Website is responsive on all screen sizes and no images are pixelated or stretch
 ![screenshot of signup.html lighthouse score](/assets/images/lighthouse-signup.png)
 
 
-### Form Testing.
-The form on the signup page was tested to ensure it functioned as expected when correct data was input and when incorrect data was input.<br>
+### Playground Testing.
+The Playground has been tested to ensure that it behaves as expected and that the player cannot cheat their way into a win.<br>
 Steps to test:
 1. Navigate to [Viking weekend signup page.](https://jesdah.github.io/Viking_weekend/signup.html)
-2. Scroll down to the form and input the following data:
-   - First Name: John
-   - Last Name: Doe
-   - Email: doe.john@test.com
-   - Phonenumber: 123456789
-   - age: 8
-   - Allergies: none
-   - Dates: select a date
-   - Anything else you like to add?: This is optional
-3. Click Submit
-4. User should be redirected to thank-you.html confirmation page.<br>
+2. Click on two cards:
+   - First card: Mountain
+   - Timer:Starts
+   - Flip +1
+   - Second card: Mountain
+   - Flip: +1
+   - Player text: You got a match!
+3. Click on the same cards:
+    - First card: Mountain
+    - Timer: unaffected
+    - Flip: unaffected
+4. Click on two unmatched cards:
+    - First card: Mountain
+    - Timer:Starts
+    - Flip +1
+    - Second card:heart
+    - Flip +1
+    - Player text: No match
+    - First and Second flipps back face down after 2 seconds.
+5. Match all cards.
+   - First card: Mountain
+   - Timer:Starts
+   - Flip +1
+   - Second card: Mountain
+   - Flip: +1
+   - Player text: You got a match!
+   * Match all cards
+   - Timer: Stops
+   - Flips: +16
+   - Player text: All cards match!! Congratulations! 
+<br>
+
 ### Expected:
 
-Form submits with no warnings or errors and user is redirected to index.html confirmation page.
+Cards would flip over when clicked and cards that didn't match would flip over, the timer would start when the first card was clicked and stop when all cards were matched.
 
 ### Actual:
 
-Website behaved as expected with no errors or warnings and redirected to index.html.<br>
-If a required field is missing the user will not be able to submit and an error field will be displayed.
-### Footer Social Media Icons / Links
-Testing was performed on the Font Awesome Social Media icons in the footer to ensure that each one opened in a new tab.
+The game behaved as expected, the player cannot cheat their way through the game via loopholes.
 
-Each item opened a new tab when clicked as expected.
+### Footer
+Tests have been done to ensure that the timer and Flip start counting and stop when they should.
+
+They behaved as expected.
 
 ### Validator Testing
 - HTML
@@ -105,7 +127,7 @@ Each item opened a new tab when clicked as expected.
   - No errors were found when passing through the official [(Jigsaw) validator](https://jigsaw.w3.org)
   ![validator result css](/assets/images/validator-css-vikingweekend.png)
 ### Unfixed Bugs
-No bugs unfixed.
+The cards do not shuffle as they should.
 ### Deployment.
 The following git commands were used throughout development to push code to the remote repo:
 
