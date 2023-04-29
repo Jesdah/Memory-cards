@@ -1,20 +1,23 @@
-![screenshot of the site on different devices](/assets/images/am-i-responsive.png)
+![screenshot of the site on different devices](/assets/images/memory-amiresponsive.png)
 # Magic Cards game! 
 ## This is a Memory cards game, flip the cards and find a matching pair.
 Magic cards is a game where you flip cards to find a matching pair. Match all the cards and the timer stops, do it again and improve your time.
 ### Modal.
-![screenshot of two old cottages with grassroof](/assets/images/screenshot-cottage.png)
+![screenshot of Modal screen](/assets/images/memory-modal.png)
 The user is greeted with an modal, it discribes to the user the rules of the game, and the user can easily close the modal and start playing.
 ### The playground.
-![screenshot of the play-ground](/assets/images/navbar.png)
+![screenshot of the play-ground](/assets/images/memory-playground.png)
 * On the playgroung there is 16 cards with the faces down.
 * The user clicks a card and a flip animation is triggerd reveiling the face of the card
 ### Player text.
-![Screenshot of some welcome text](/assets/images/welcome.png)<br>
+![Screenshot of No match text](/assets/images/memory-nomatch-playertext.png)<br>
+![Screenshot of You got a match text](/assets/images/memory-yougotamatch-playertext.png)<br>
+![Screenshot of all cards match text](/assets/images/memory-allcardsmatch-playertext.png)<br>
+
 The purpose is for the user to receive a confirmation whether the user received a match or not.
 
 ### The Footer.
-![Screenshot of the stone footer with icons to social media and contact information](/assets/images/stone-footer.png)
+![Screenshot of the footer with flip counter and timer](/assets/images/memory-footer.png)
 * The footer is placed at the bottom of the page with a black background color.
 * In the footer we find a timer and a "flip" counter.
 * The footer is responsive on all devices
@@ -46,7 +49,7 @@ I would like to implement a scoreboard.
 ### Responsivenes.
 The site were tested to ensure responsiveness on screen sizes from 320px and upwards on Chrome and Edge.
 ### Steps to test:
-1. Open browser and navigate to [Viking weekend](/index.html).
+1. Open browser and navigate to [Magic cards](https://jesdah.github.io/Memory-cards/).
 2. Open the developer tools (right click and inspect)
 3. Set to responsive and decrease width to 320px
 4. Set the zoom to 50%
@@ -60,16 +63,12 @@ Website is responsive on all screen sizes and no images are pixelated or stretch
 * Iphone 13
 * Lenovo ideapad S340
 ## Lighthouse Testing.
-![screenshot of index.html lighthouse score](/assets/images/lighthouse-index.png)<br>
-![screenshot of events.html lighthouse score](/assets/images/lighthouse-event.png)<br>
-![screenshot of gallery.html lighthouse score](/assets/images/lighthouse-gallery.png)<br>
-![screenshot of signup.html lighthouse score](/assets/images/lighthouse-signup.png)
-
+![screenshot of lighthouse score](/assets/images/memory-lighthouse.png)<br>
 
 ### Playground Testing.
 The Playground has been tested to ensure that it behaves as expected and that the player cannot cheat their way into a win.<br>
 Steps to test:
-1. Navigate to [Viking weekend signup page.](https://jesdah.github.io/Viking_weekend/signup.html)
+1. Navigate to [Magic card.](https://jesdah.github.io/Memory-cards/)
 2. Click on two cards:
    - First card: Mountain
    - Timer:Starts
@@ -118,16 +117,16 @@ They behaved as expected.
 ### Validator Testing
 - HTML
   - No errors were returned when passing through the official [W3C validator](https://validator.w3.org)
-  ![validator result index.html](/assets/images/validator-index.png)<br>
-  ![validator result events.html](/assets/images/validator-events.png)<br>
-  ![validator result gallery.html](/assets/images/validator-gallery.png)<br>
-  ![validator result signup.html](/assets/images/validator-signup.png)<br>
-  ![validator result thank-you.html](/assets/images/validator-thank-you.png)
+  ![validator result index.html](/assets/images/Memory-html-validator.png)<br>
+
 - CSS
   - No errors were found when passing through the official [(Jigsaw) validator](https://jigsaw.w3.org)
-  ![validator result css](/assets/images/validator-css-vikingweekend.png)
+  ![validator result style.css](/assets/images/Memory-css-validator.png)<br>
+
+  - No errors were found when passing through the official [Jshint validator](https://jshint.com/)
+  ![Jshint result script.js](/assets/images/memory-jshint-validator.png)
 ### Unfixed Bugs
-The cards do not shuffle as they should.
+When using the app on an iPhone 13, the icons disappear, which makes it difficult for the player to remember what the symbol is.
 ### Deployment.
 The following git commands were used throughout development to push code to the remote repo:
 
