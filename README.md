@@ -125,6 +125,10 @@ They behaved as expected.
 
   - No errors were found when passing through the official [Jshint validator](https://jshint.com/)
   ![Jshint result script.js](/assets/images/memory-jshint-validator.png)
+### Bugs.
+During most of the project I have not been able to get the icons to mix.
+I solved it by creating a new id for each card.
+Then a new problem was created that the card could not be matched. I solved it by creating a new div and putting the icons in there aswell. The last thing I did was set the font-size to 0 on the new div so that the user don't see the text but the match function can still read it, wich solved the problem.
 ### Unfixed Bugs
 When using the app on an iPhone 13, the icons disappear, which makes it difficult for the player to remember what the symbol is.
 ### Deployment.
