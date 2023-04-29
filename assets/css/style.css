@@ -175,7 +175,13 @@ body {
     display: block;
 }
 #bottom {
-    bottom: 17%;
+    bottom: 9%;;
+}
+.play-ground {
+    position: absolute;
+    left: 50%;
+    top: 41%;
+    transform: translate(-50%, -50%);
 }
 
 }
@@ -188,6 +194,9 @@ body {
     }
     .side {
         font-size: 30px;
+    }
+    #bottom {
+        bottom: 18%;;
     }
 }
 @media screen and (max-width:450px) {
