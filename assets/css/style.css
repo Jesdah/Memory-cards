@@ -202,4 +202,6 @@ body {
     }
     
 }
-
+.hidden {
+    font-size: 0;
+}

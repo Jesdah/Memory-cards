@@ -33,23 +33,22 @@ for (let i = icons.length- 1; i > 0; i--) {
 
 //shuffleIcons(icons)=document.getElementsByClassName('back');
 function executeShuffle() {
-document.getElementById('0').innerHTML= `<i class="${icons[0]}"<style font-size="0">${icons[0]}</i>`;
-document.getElementById('1').innerHTML= `<i class="${icons[1]}"><noscript>${icons[1]}</noscript></i>`;
-document.getElementById('2').innerHTML= `<i class="${icons[2]}"><noscript>${icons[2]}</noscript></i>`;
-document.getElementById('3').innerHTML= `<i class="${icons[3]}"><noscript>${icons[3]}</noscript></i>`;
-document.getElementById('4').innerHTML= `<i class="${icons[4]}"><noscript>${icons[4]}</noscript></i>`;
-document.getElementById('5').innerHTML= `<i class="${icons[5]}"><noscript>${icons[5]}</noscript></i>`;
-document.getElementById('6').innerHTML= `<i class="${icons[6]}"><noscript>${icons[6]}</noscript></i>`;
-document.getElementById('7').innerHTML= `<i class="${icons[7]}"><noscript>${icons[7]}</noscript></i>`;
-document.getElementById('8').innerHTML= `<i class="${icons[8]}"><noscript>${icons[8]}</noscript></i>`;
-document.getElementById('9').innerHTML= `<i class="${icons[9]}"><noscript>${icons[9]}</noscript></i>`;
-document.getElementById('10').innerHTML= `<i class="${icons[10]}"><noscript>${icons[10]}</noscript></i>`;
-document.getElementById('11').innerHTML= `<i class="${icons[11]}"><noscript>${icons[11]}</noscript></i>`;
-document.getElementById('12').innerHTML= `<i class="${icons[12]}"><noscript>${icons[12]}</noscript></i>`;
-document.getElementById('13').innerHTML= `<i class="${icons[13]}"><noscript>${icons[13]}</noscript></i>`;
-document.getElementById('14').innerHTML= `<i class="${icons[14]}"><noscript>${icons[14]}</noscript></i>`;
-document.getElementById('15').innerHTML= `<i class="${icons[15]}"><noscript>${icons[15]}</noscript></i>`;
-
+document.getElementById('0').innerHTML= `<i class="${icons[0]}"><div class="hidden">"${icons[0]}"</div></i>`;
+document.getElementById('1').innerHTML= `<i class="${icons[1]}"><div class="hidden">"${icons[1]}"</div></i>`;
+document.getElementById('2').innerHTML= `<i class="${icons[2]}"><div class="hidden">"${icons[2]}"</div></i>`;
+document.getElementById('3').innerHTML= `<i class="${icons[3]}"><div class="hidden">"${icons[3]}"</div></i>`;
+document.getElementById('4').innerHTML= `<i class="${icons[4]}"><div class="hidden">"${icons[4]}"</div></i>`;
+document.getElementById('5').innerHTML= `<i class="${icons[5]}"><div class="hidden">"${icons[5]}"</div></i>`;
+document.getElementById('6').innerHTML= `<i class="${icons[6]}"><div class="hidden">"${icons[6]}"</div></i>`;
+document.getElementById('7').innerHTML= `<i class="${icons[7]}"><div class="hidden">"${icons[7]}"</div></i>`;
+document.getElementById('8').innerHTML= `<i class="${icons[8]}"><div class="hidden">"${icons[8]}"</div></i>`;
+document.getElementById('9').innerHTML= `<i class="${icons[9]}"><div class="hidden">"${icons[9]}"</div></i>`;
+document.getElementById('10').innerHTML= `<i class="${icons[10]}"><div class="hidden">"${icons[10]}"</div></i>`;
+document.getElementById('11').innerHTML= `<i class="${icons[11]}"><div class="hidden">"${icons[11]}"</div></i>`;
+document.getElementById('12').innerHTML= `<i class="${icons[12]}"><div class="hidden">"${icons[12]}"</div></i>`;
+document.getElementById('13').innerHTML= `<i class="${icons[13]}"><div class="hidden">"${icons[13]}"</div></i>`;
+document.getElementById('14').innerHTML= `<i class="${icons[14]}"><div class="hidden">"${icons[14]}"</div></i>`;
+document.getElementById('15').innerHTML= `<i class="${icons[15]}"><div class="hidden">"${icons[15]}"</div></i>`;
 
 
 
