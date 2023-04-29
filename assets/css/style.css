@@ -82,6 +82,7 @@ to test if the cards respond at all.*/
     position: absolute;
     text-align: center;
     
+    
 }
 /*Flip animation*/
 .front.side,
@@ -201,3 +202,4 @@ body {
     }
     
 }
+

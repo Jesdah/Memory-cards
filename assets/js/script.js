@@ -33,22 +33,22 @@ for (let i = icons.length- 1; i > 0; i--) {
 
 //shuffleIcons(icons)=document.getElementsByClassName('back');
 function executeShuffle() {
-document.getElementById('0').innerHTML= `<i class="${icons[0]}"></i>`;
-document.getElementById('1').innerHTML= `<i class="${icons[1]}"></i>`;
-document.getElementById('2').innerHTML= `<i class="${icons[2]}"></i>`;
-document.getElementById('3').innerHTML= `<i class="${icons[3]}"></i>`;
-document.getElementById('4').innerHTML= `<i class="${icons[4]}"></i>`;
-document.getElementById('5').innerHTML= `<i class="${icons[5]}"></i>`;
-document.getElementById('6').innerHTML= `<i class="${icons[6]}"></i>`;
-document.getElementById('7').innerHTML= `<i class="${icons[7]}"></i>`;
-document.getElementById('8').innerHTML= `<i class="${icons[8]}"></i>`;
-document.getElementById('9').innerHTML= `<i class="${icons[9]}"></i>`;
-document.getElementById('10').innerHTML= `<i class="${icons[10]}"></i>`;
-document.getElementById('11').innerHTML= `<i class="${icons[11]}"></i>`;
-document.getElementById('12').innerHTML= `<i class="${icons[12]}"></i>`;
-document.getElementById('13').innerHTML= `<i class="${icons[13]}"></i>`;
-document.getElementById('14').innerHTML= `<i class="${icons[14]}"></i>`;
-document.getElementById('15').innerHTML= `<i class="${icons[15]}"></i>`;
+document.getElementById('0').innerHTML= `<i class="${icons[0]}"<style font-size="0">${icons[0]}</i>`;
+document.getElementById('1').innerHTML= `<i class="${icons[1]}"><noscript>${icons[1]}</noscript></i>`;
+document.getElementById('2').innerHTML= `<i class="${icons[2]}"><noscript>${icons[2]}</noscript></i>`;
+document.getElementById('3').innerHTML= `<i class="${icons[3]}"><noscript>${icons[3]}</noscript></i>`;
+document.getElementById('4').innerHTML= `<i class="${icons[4]}"><noscript>${icons[4]}</noscript></i>`;
+document.getElementById('5').innerHTML= `<i class="${icons[5]}"><noscript>${icons[5]}</noscript></i>`;
+document.getElementById('6').innerHTML= `<i class="${icons[6]}"><noscript>${icons[6]}</noscript></i>`;
+document.getElementById('7').innerHTML= `<i class="${icons[7]}"><noscript>${icons[7]}</noscript></i>`;
+document.getElementById('8').innerHTML= `<i class="${icons[8]}"><noscript>${icons[8]}</noscript></i>`;
+document.getElementById('9').innerHTML= `<i class="${icons[9]}"><noscript>${icons[9]}</noscript></i>`;
+document.getElementById('10').innerHTML= `<i class="${icons[10]}"><noscript>${icons[10]}</noscript></i>`;
+document.getElementById('11').innerHTML= `<i class="${icons[11]}"><noscript>${icons[11]}</noscript></i>`;
+document.getElementById('12').innerHTML= `<i class="${icons[12]}"><noscript>${icons[12]}</noscript></i>`;
+document.getElementById('13').innerHTML= `<i class="${icons[13]}"><noscript>${icons[13]}</noscript></i>`;
+document.getElementById('14').innerHTML= `<i class="${icons[14]}"><noscript>${icons[14]}</noscript></i>`;
+document.getElementById('15').innerHTML= `<i class="${icons[15]}"><noscript>${icons[15]}</noscript></i>`;
 
 
 
@@ -105,18 +105,17 @@ playCard.forEach(function (card) {
       first = card;
       card.classList.add('flipcard');
       playerFlips++;
-      console.log(first)
+      console.log(first.innerText)
     } else if (first && !second) {
       if (this===first) return;/*Ensures that the user can not click on the same
        card again to get 8 points and win the game,
         got this one from: https://marina-ferreira.github.io/tutorials/js/memory-game/*/
       second = card;
-      console.log(second)
+      console.log(second.innerText)
       playerFlips++;//counts flips.
       card.classList.add('flipcard');
  
-      if (first.innerHTML === second.innerHTML) { //checks if the two cards are identical.
-        console.log(first.innerHTML);
+      if (first.innerText === second.innerText) { //checks if the two cards are identical.
         first = null;
         second = null;
         matchCardCounter++;
