@@ -70,13 +70,11 @@ playCard.forEach(function (card) {
       first = card;
       card.classList.add('flipcard');
       playerFlips++;
-      console.log(first.innerText)
     } else if (first && !second) {
       if (this===first) return;/*Ensures that the user can not click on the same
        card again to get 8 points and win the game,
         got this one from: https://marina-ferreira.github.io/tutorials/js/memory-game/*/
       second = card;
-      console.log(second.innerText)
       playerFlips++;//counts flips.
       card.classList.add('flipcard');
  
@@ -106,8 +104,8 @@ playCard.forEach(function (card) {
 function countFlips() {//counts the number of flips done by the user.
   //targets "Flips:" in footer
   let playerFlipsDiv = document.getElementById("flips");
-  playerFlipsDiv.innerHTML = `Flips: ${playerFlips}`
-};
+  playerFlipsDiv.innerHTML = `Flips: ${playerFlips}`;
+}
 
 /**countTimer
  * This function sets a count up timer wich triggers when the 
@@ -149,19 +147,19 @@ let span = document.getElementsByClassName("close")[0];// Get the <span> element
 
 btn.onclick = function() {  // When the user clicks on the button, open the modal
   modal.style.display = "block";
-}
+};
 
 
 span.onclick = function() { // When the user clicks on <span> (x), close the modal
   modal.style.display = "none";
-}
+};
 
 
 window.onclick = function(event) {  // When the user clicks anywhere outside of the modal, close it
   if (event.target == modal) {
     modal.style.display = "none";
   }
-}
+};
 
 addEventListener("click", countFlips);//Event listener for the countFlips function.
-addEventListener('click',executeShuffle)// event listener for the shuffle function.
+addEventListener('click',executeShuffle);// event listener for the shuffle function.
