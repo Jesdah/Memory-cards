@@ -117,7 +117,7 @@ They behaved as expected.
 ### Validator Testing
 - HTML
   - No errors were returned when passing through the official [W3C validator](https://validator.w3.org)
-  ![validator result index.html](/assets/images/Memory-html-validator.png)<br>
+  ![validator result index.html](/assets/images/memory-html-validator.png)<br>
 
 - CSS
   - No errors were found when passing through the official [(Jigsaw) validator](https://jigsaw.w3.org)
@@ -140,7 +140,7 @@ The following git commands were used throughout development to push code to the 
   - From the source section drop-down menu, select the Branch: main
   - Click 'Save'
   - A live link will be displayed in a green banner when published successfully. 
-The live link can be found here. https://jesdah.github.io/Viking_weekend/
+The live link can be found here. https://jesdah.github.io/Memory-cards/
 ### Clone the Repository Code Locally
 Navigate to the GitHub Repository you want to clone to use locally:
 - Click on the code drop down button
