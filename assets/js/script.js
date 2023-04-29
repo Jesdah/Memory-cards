@@ -29,9 +29,12 @@ for (let i = icons.length- 1; i > 0; i--) {
   icons[idx2] = temp;
   
 }
-
-
-//shuffleIcons(icons)=document.getElementsByClassName('back');
+/**Targets all id's of backside of the cards.
+ * This is the best solution to get the shuffled icons to appear on screen,
+ * document.getElementById targets all the id's and creates innerHTML witch contains the  
+ * class icons and div witch contains innerText that allows the match function to read
+ * the inner text.
+ */
 function executeShuffle() {
 document.getElementById('0').innerHTML= `<i class="${icons[0]}"><div class="hidden">"${icons[0]}"</div></i>`;
 document.getElementById('1').innerHTML= `<i class="${icons[1]}"><div class="hidden">"${icons[1]}"</div></i>`;
@@ -50,44 +53,7 @@ document.getElementById('13').innerHTML= `<i class="${icons[13]}"><div class="hi
 document.getElementById('14').innerHTML= `<i class="${icons[14]}"><div class="hidden">"${icons[14]}"</div></i>`;
 document.getElementById('15').innerHTML= `<i class="${icons[15]}"><div class="hidden">"${icons[15]}"</div></i>`;
 
-
-
-
-console.log(icons[0]);
-console.log(icons[1]);
-console.log(icons[2]);
-console.log(icons[3]);
-console.log(icons[4]);
-console.log(icons[5]);
-console.log(icons[6]);
-console.log(icons[7]);
-console.log(icons[8]);
-console.log(icons[9]);
-console.log(icons[10]);
-console.log(icons[11]);
-console.log(icons[12]);
-console.log(icons[13]);
-console.log(icons[14]);
-console.log(icons[15]);
-
-
 }
-
-
-//test 
-/*function shuffleCards(icons) {
-  for (let i = icons.length - 1; i > 0; i--) {
-    const idx1 = Math.floor(Math.random() * (i+1));
-    const idx2 = Math.floor(Math.random() * (i+1));
-    [icons[idx1]],[icons[idx2]]=[icons[idx1]],[icons[idx2]]
-    
-  }
-  shuffleCards(icons)
-}*/
-
-
-
-
 
 
 /** Flipcard function.
@@ -198,4 +164,4 @@ window.onclick = function(event) {  // When the user clicks anywhere outside of 
 }
 
 addEventListener("click", countFlips);//Event listener for the countFlips function.
-addEventListener('click',executeShuffle)
+addEventListener('click',executeShuffle)// event listener for the shuffle function.

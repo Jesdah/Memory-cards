@@ -96,13 +96,18 @@ to test if the cards respond at all.*/
     transform: rotateY(-180deg);
     
 }
-
+/*Targets all the cards*/
 .side {
     font-size: 40px;
 }
+/*This targets the divs inside back side of the cards and makes it possible for the 
+JavaScript to read the text content.*/
+.hidden {
+    font-size: 0;
+}
 
-
-/*This code structure was taken from:https://www.w3schools.com/howto/howto_css_modals.asp*/
+/*Modal content.
+This code structure was taken from:https://www.w3schools.com/howto/howto_css_modals.asp*/
 #myBtn {
     background-color:aqua; 
     border-radius: 50px;
@@ -141,10 +146,8 @@ to test if the cards respond at all.*/
 .close {/*Close button*/
     display: none;
 }
-#player-text {
-    font-size: 30px;
-    
-}
+
+
 /*Targets the buttom div wich contains the button and player-text*/
 #bottom {
     position: absolute;
@@ -156,7 +159,9 @@ to test if the cards respond at all.*/
     flex-direction: column-reverse;
     height: 100px;
 }
-
+#player-text {
+    font-size: 30px;
+}
 /*footer element*/
 footer {
     position: fixed;
@@ -210,7 +215,4 @@ body {
         width: 90%;
     }
     
-}
-.hidden {
-    font-size: 0;
 }
