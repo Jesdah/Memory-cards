@@ -36,22 +36,22 @@ for (let i = icons.length- 1; i > 0; i--) {
  * the inner text.
  */
 function executeShuffle() {
-document.getElementById('0').innerHTML= `<i class="${icons[0]}"><div class="hidden">"${icons[0]}"</div></i>`;
-document.getElementById('1').innerHTML= `<i class="${icons[1]}"><div class="hidden">"${icons[1]}"</div></i>`;
-document.getElementById('2').innerHTML= `<i class="${icons[2]}"><div class="hidden">"${icons[2]}"</div></i>`;
-document.getElementById('3').innerHTML= `<i class="${icons[3]}"><div class="hidden">"${icons[3]}"</div></i>`;
-document.getElementById('4').innerHTML= `<i class="${icons[4]}"><div class="hidden">"${icons[4]}"</div></i>`;
-document.getElementById('5').innerHTML= `<i class="${icons[5]}"><div class="hidden">"${icons[5]}"</div></i>`;
-document.getElementById('6').innerHTML= `<i class="${icons[6]}"><div class="hidden">"${icons[6]}"</div></i>`;
-document.getElementById('7').innerHTML= `<i class="${icons[7]}"><div class="hidden">"${icons[7]}"</div></i>`;
-document.getElementById('8').innerHTML= `<i class="${icons[8]}"><div class="hidden">"${icons[8]}"</div></i>`;
-document.getElementById('9').innerHTML= `<i class="${icons[9]}"><div class="hidden">"${icons[9]}"</div></i>`;
-document.getElementById('10').innerHTML= `<i class="${icons[10]}"><div class="hidden">"${icons[10]}"</div></i>`;
-document.getElementById('11').innerHTML= `<i class="${icons[11]}"><div class="hidden">"${icons[11]}"</div></i>`;
-document.getElementById('12').innerHTML= `<i class="${icons[12]}"><div class="hidden">"${icons[12]}"</div></i>`;
-document.getElementById('13').innerHTML= `<i class="${icons[13]}"><div class="hidden">"${icons[13]}"</div></i>`;
-document.getElementById('14').innerHTML= `<i class="${icons[14]}"><div class="hidden">"${icons[14]}"</div></i>`;
-document.getElementById('15').innerHTML= `<i class="${icons[15]}"><div class="hidden">"${icons[15]}"</div></i>`;
+document.getElementById('0').innerHTML= `<i class="${icons[0]}"><span class="hidden">"${icons[0]}"</span></i>`;
+document.getElementById('1').innerHTML= `<i class="${icons[1]}"><span class="hidden">"${icons[1]}"</span></i>`;
+document.getElementById('2').innerHTML= `<i class="${icons[2]}"><span class="hidden">"${icons[2]}"</span></i>`;
+document.getElementById('3').innerHTML= `<i class="${icons[3]}"><span class="hidden">"${icons[3]}"</span></i>`;
+document.getElementById('4').innerHTML= `<i class="${icons[4]}"><span class="hidden">"${icons[4]}"</span></i>`;
+document.getElementById('5').innerHTML= `<i class="${icons[5]}"><span class="hidden">"${icons[5]}"</span></i>`;
+document.getElementById('6').innerHTML= `<i class="${icons[6]}"><span class="hidden">"${icons[6]}"</span></i>`;
+document.getElementById('7').innerHTML= `<i class="${icons[7]}"><span class="hidden">"${icons[7]}"</span></i>`;
+document.getElementById('8').innerHTML= `<i class="${icons[8]}"><span class="hidden">"${icons[8]}"</span></i>`;
+document.getElementById('9').innerHTML= `<i class="${icons[9]}"><span class="hidden">"${icons[9]}"</span></i>`;
+document.getElementById('10').innerHTML= `<i class="${icons[10]}"><span class="hidden">"${icons[10]}"</span></i>`;
+document.getElementById('11').innerHTML= `<i class="${icons[11]}"><span class="hidden">"${icons[11]}"</span></i>`;
+document.getElementById('12').innerHTML= `<i class="${icons[12]}"><span class="hidden">"${icons[12]}"</span></i>`;
+document.getElementById('13').innerHTML= `<i class="${icons[13]}"><span class="hidden">"${icons[13]}"</span></i>`;
+document.getElementById('14').innerHTML= `<i class="${icons[14]}"><span class="hidden">"${icons[14]}"</span></i>`;
+document.getElementById('15').innerHTML= `<i class="${icons[15]}"><span class="hidden">"${icons[15]}"</span></i>`;
 
 }
 
@@ -71,9 +71,9 @@ playCard.forEach(function (card) {
       card.classList.add('flipcard');
       playerFlips++;
     } else if (first && !second) {
+      //Got this one from: https://marina-ferreira.github.io/tutorials/js/memory-game/
       if (this===first) return;/*Ensures that the user can not click on the same
-       card again to get 8 points and win the game,
-        got this one from: https://marina-ferreira.github.io/tutorials/js/memory-game/*/
+       card again to get 8 points and win the game,*/
       second = card;
       playerFlips++;//counts flips.
       card.classList.add('flipcard');
@@ -87,7 +87,7 @@ playCard.forEach(function (card) {
           document.getElementById('player-text').innerHTML=`All cards match, Congratulations!!`;//Stops the timer.
         }
       }
-      else {setTimeout(() => { //if the cards do not match a timer is set to reset the cards in 2sek.
+      else {setTimeout(() => { //if the cards do not match a timer is set to reset the cards in 2 seconds.
         first.classList.remove('flipcard');
         second.classList.remove('flipcard');
         document.getElementById('player-text').innerHTML=`No match`;
