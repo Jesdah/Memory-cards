@@ -33,7 +33,7 @@ li {/*All the list items*/
     padding: 5px;
 }
 
-.play-card { /*Id of list items*/
+.play-card { /*Class of list items*/
     display: flex;
     background-color: aliceblue;
     align-items: center;
@@ -118,12 +118,12 @@ This code structure was taken from:https://www.w3schools.com/howto/howto_css_mod
     width: 110px;
              
 }
-
+/*https://www.w3schools.com/howto/howto_css_modals.asp*/
 #myBtn:hover {
     background-color:rgb(1, 126, 126);
     color: beige;
 }
-
+/*https://www.w3schools.com/howto/howto_css_modals.asp*/
 #myModal {
     background-color:rgb(173,216,230,0.9);
     top: 50%;
@@ -134,7 +134,7 @@ This code structure was taken from:https://www.w3schools.com/howto/howto_css_mod
     height: 70%;
     border-radius: 50px
 }
-
+/*https://www.w3schools.com/howto/howto_css_modals.asp*/
 .modal-content {
     text-align: center;
     top: 50%;
@@ -143,6 +143,7 @@ This code structure was taken from:https://www.w3schools.com/howto/howto_css_mod
     transform: translate(-50%, -50%);
     
 }
+/*https://www.w3schools.com/howto/howto_css_modals.asp*/
 .close {/*Close button*/
     display: none;
 }
