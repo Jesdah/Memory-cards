@@ -172,4 +172,4 @@ The project will now been cloned on your local machine for use.
 
 * To align the cards in 4x4 I have used code from: https://www.codingnepalweb.com/build-memory-card-game-html-javascript/
 
-* To make the cards act resonsive when the user clicks them I have used code from: https://marina-ferreira.github.io/tutorials/js/memory-game/
+* To make the cards act responsive when the user clicks them I have used code from: https://marina-ferreira.github.io/tutorials/js/memory-game/
