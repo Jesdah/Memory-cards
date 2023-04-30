@@ -32,7 +32,7 @@ for (let i = icons.length- 1; i > 0; i--) {
 /**Targets all id's of backside of the cards.
  * This is the best solution to get the shuffled icons to appear on screen,
  * document.getElementById targets all the id's and creates innerHTML witch contains the  
- * class icons and div witch contains innerText that allows the match function to read
+ * class icons and span witch contains innerText that allows the match function to read
  * the inner text.
  */
 function executeShuffle() {

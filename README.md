@@ -30,7 +30,8 @@ The purpose is for the user to receive a confirmation whether the user received 
 * Shuffle function
 * modal
 ### Features left to implement.
-I would like to implement a scoreboard.
+I would like to implement a scoreboard and a reset button in the future.
+
 ### Technologies.
 * HTML
     * The structure of the Website was developed using HTML as the main language.
@@ -103,7 +104,7 @@ Steps to test:
 
 ### Expected:
 
-Cards would flip over when clicked and cards that didn't match would flip over, the timer would start when the first card was clicked and stop when all cards were matched.
+Cards would flip over when clicked and cards that didn't match would flip back, the timer would start when the first card was clicked and stop when all cards were matched.
 
 ### Actual:
 
@@ -123,14 +124,15 @@ They behaved as expected.
   - No errors were found when passing through the official [(Jigsaw) validator](https://jigsaw.w3.org)
   ![validator result style.css](/assets/images/Memory-css-validator.png)<br>
 
-  - No errors were found when passing through the official [Jshint validator](https://jshint.com/)
+  - No errors were found when passing through the official [Jshint linter](https://jshint.com/)
   ![Jshint result script.js](/assets/images/memory-jshint-validator.png)
 ### Bugs.
 During most of the project I have not been able to get the icons to mix.
 I solved it by creating a new id for each card.
-Then a new problem was created that the card could not be matched. I solved it by creating a new div and putting the icons in there aswell. The last thing I did was set the font-size to 0 on the new div so that the user don't see the text but the match function can still read it, wich solved the problem.
+Then a new problem was created that the card could not be matched. I solved it by creating a new span and putting the icons in there aswell. The last thing I did was set the font-size to 0 on the new span so that the user don't see the text but the match function can still read it, wich solved the problem.
 ### Unfixed Bugs
-When using the app on an iPhone 13, the icons disappear, which makes it difficult for the player to remember what the symbol is.
+When using the website on an iPhone 13, the icons on the back disappear right after the cards have been turned over, which makes it difficult for the player to remember what the symbol is.
+I have poor knowledge of IOS so I haven't been able to fix it.
 ### Deployment.
 The following git commands were used throughout development to push code to the remote repo:
 
